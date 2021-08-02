@@ -1,1 +1,2 @@
 ng g component all-books
+ng g component new-book

@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'try1';
+  title = 'Test';
+  currentPage= "home";
+  displayPages= ["home", "bookList", "newBook"];
+
+  constructor() {
+  }
+
+  pickPage(page: string){
+    this.currentPage = page;
+  }
 }

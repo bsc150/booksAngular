@@ -1,2 +1,20 @@
+1. create components
 ng g component all-books
 ng g component new-book
+
+2. add page movement logic
+in app.component.html:
+  <div *ngFor="let page of displayPages">
+    <button (click)="pickPage(page)">{{page}}</button>
+  </div>
+in app.component.ts
+  title = 'Test';
+  currentPage= "home";
+  displayPages= ["home", "bookList", "newBook"];
+
+  constructor() {
+  }
+
+  pickPage(page: string){
+    this.currentPage = page;
+  }

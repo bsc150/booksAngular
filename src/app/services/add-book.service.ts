@@ -18,7 +18,6 @@ export class AddBookService {
     const book: Book = {
       id, title
     };
-    console.log("calling post with book" + book.id +" " +  book.title);
     return this.http.post<Book>("http://localhost:3000/books", book, this.httpOptions)
   }
 }

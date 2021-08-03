@@ -1,10 +1,12 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { AllBooksComponent } from './all-books/all-books.component';
-import { NewBookComponent } from './new-book/new-book.component';
+import {AppComponent} from './app.component';
+import {AllBooksComponent} from './all-books/all-books.component';
+import {NewBookComponent} from './new-book/new-book.component';
 import {FormsModule} from "@angular/forms";
+import {BookService} from "./services/book.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -12,11 +14,16 @@ import {FormsModule} from "@angular/forms";
     AllBooksComponent,
     NewBookComponent
   ],
-    imports: [
-        BrowserModule,
-        FormsModule
-    ],
-  providers: [],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
+  ],
+  providers: [
+    BookService,
+    HttpClient
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

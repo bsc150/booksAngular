@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Book} from "../models/book.model";
 
 @Component({
@@ -7,8 +7,8 @@ import {Book} from "../models/book.model";
   styleUrls: ['./new-book.component.css']
 })
 export class NewBookComponent implements OnInit {
-  id: string;
-  title: string;
+  id = "";
+  title= "";
 
   constructor() {
   }

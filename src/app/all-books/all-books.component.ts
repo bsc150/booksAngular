@@ -9,13 +9,18 @@ import {BookService} from "../services/book.service";
   styleUrls: ['./all-books.component.css']
 })
 export class AllBooksComponent implements OnInit {
-  books: Observable<Book[]>;
+  books: Book[] = [];
 
   constructor(public service: BookService) {
   }
 
   ngOnInit(): void {
-    this.books = this.service.getBooks();
+    this.getBooks();
+  }
+
+  getBooks(): void {
+    this.service.getBooks()
+      .subscribe(books => this.books = books);
   }
 
 }

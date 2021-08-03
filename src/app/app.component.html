@@ -1,3 +1,6 @@
 <div *ngFor="let page of displayPages">
   <button (click)="pickPage(page)">{{page}}</button>
 </div>
+
+<app-all-books *ngIf="currentPage === 'bookList'"></app-all-books>
+<app-new-book *ngIf="currentPage === 'newBook'"></app-new-book>

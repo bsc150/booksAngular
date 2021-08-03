@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs";
+import {Component, OnInit} from '@angular/core';
 import {Book} from "../models/book.model";
 import {BookService} from "../services/book.service";
 
@@ -22,5 +21,4 @@ export class AllBooksComponent implements OnInit {
     this.service.getBooks()
       .subscribe(books => this.books = books);
   }
-
 }

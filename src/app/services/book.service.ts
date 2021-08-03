@@ -8,6 +8,6 @@ export class BookService {
   constructor(private http: HttpClient) { }
 
   getBooks(){
-    return this.http.get<Book[]>("https://my-json-server.typicode.com/typicode/demo/posts")
+    return this.http.get<Book[]>("http://localhost:3000/books")
   }
 }
